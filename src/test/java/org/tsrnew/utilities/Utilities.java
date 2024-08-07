@@ -8,11 +8,7 @@ public class Utilities {
     public boolean isWithInPriceRange(List<WebElement> pricesList) {
         for (WebElement price : pricesList) {
             int freshPrice = Integer.parseInt(price.getText().replace("$", "").replace(",", "").replace(".00", ""));
-
-            System.out.println(freshPrice);
-
             // Assert the price is within the expected range
-
             return freshPrice >= 30 && freshPrice <= 90;
         }
         return false;
