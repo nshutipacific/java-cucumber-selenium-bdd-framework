@@ -56,7 +56,7 @@ public class ProductCategory {
         List<WebElement> products = driver.findElements(By.cssSelector("html > body > div > div:nth-of-type(1) > div > div:nth-of-type(2) > main > div > ul > li > div > span.ast-woo-product-category"));
         for (WebElement product : products) {
             System.out.println(product.getText().toLowerCase());
-            assertTrue("Product of "+ product.getText() + "Category does not belong to the expected category: " + category,
+            assertTrue("Product of "+ product.getText() + " Category does not belong to the expected category: " + category,
                     category.toLowerCase().startsWith(product.getText().toLowerCase()));
         }
     }
