@@ -8,8 +8,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = "src/test/java/org/tsrnew/features",
         glue = {"org.tsrnew.steps", "org.tsrnew.hooks"},
-        plugin = {"pretty", "html:target/cucumber-reports"},
-        monochrome = true
+        plugin = {"pretty", "html:target/cucumber-reports.html", "json:target/cucumber.json"}
 )
-public class runner {
+public class Runner {
 }
